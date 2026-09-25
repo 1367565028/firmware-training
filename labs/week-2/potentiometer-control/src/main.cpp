@@ -12,9 +12,13 @@
 #include <Arduino.h>
 
 void setup() {
-
+    pinMode(11, OUTPUT);
+    pinMode(10, OUTPUT);
+    pinMode(2, INPUT);
+    pinMode(3, INPUT);
+    pinMode(A5, INPUT);
 }
 
 void loop() {
-  
+  analogWrite(10,analogRead(A5));
 }

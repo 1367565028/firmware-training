@@ -17,9 +17,19 @@
 #include <Arduino.h>
 
 void setup() {
-
+    pinMode(11, OUTPUT);
+    pinMode(10, OUTPUT);
+    pinMode(2, INPUT);
+    pinMode(3, INPUT);
 }
 
 void loop() {
-  
+    //yi
+   digitalWrite(11, HIGH);
+   delay(0.25);
+   digitalWrite(11, LOW);
+   delay(0.25);
+   //er
+   analogWrite(10, 50);
+
 }

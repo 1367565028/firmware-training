@@ -26,9 +26,23 @@
 #include <Arduino.h>
 
 void setup() {
-
+    pinMode(11, OUTPUT);
+    pinMode(10, OUTPUT);
+    pinMode(2, INPUT);
+    pinMode(3, INPUT);
 }
 
 void loop() {
-  
+    if (digitalRead(2) == 1) {
+        digitalWrite(11, HIGH);
+        delay(100);
+    } else {
+        digitalWrite(11, LOW);
+    }
+    if (digitalRead(3) == 0) {
+        digitalWrite(10, HIGH);
+        delay(100);
+    } else {
+        digitalWrite(10, LOW);
+    }
 }
